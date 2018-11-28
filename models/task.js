@@ -16,9 +16,9 @@ const taskSchema = new mongoose.Schema({
     type: String,
     maxlength: 2000
   },
-  types: [String],
+  type: String,
   people: [String],
-  location: [String],
+  location: String,
   notifications: String,
   colors: [String],
   date: {
