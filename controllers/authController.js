@@ -10,9 +10,9 @@ function hashPassword (password, options) {
 }
 
 function jwtSignUser ({ email, _id }, isAdmin = false) {
-  const ONE_HOUR = 60 * 60
+  const ONE_MONTH = 60 * 60 * 24 * 30
   return jwt.sign({ email, id: _id, isAdmin }, keys.authentication.jwtSecret, {
-    expiresIn: ONE_HOUR
+    expiresIn: ONE_MONTH
   })
 }
 
